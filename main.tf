@@ -8,7 +8,7 @@ resource "azurerm_management_group" "mg" {
 // var parent_id = map[string]string{"management_group_name": "management_group_id"}
 output "parent_ids" {
   value = {
-    for mg in toset(var.management_groups):
+    for mg in toset(var.management_groups) :
     mg => azurerm_management_group.mg[mg].id
   }
 }
