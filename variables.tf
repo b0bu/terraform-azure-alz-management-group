@@ -1,5 +1,5 @@
-variable "management_groups" {
-  type        = list(any)
+variable "display_name" {
+  type        = string
   description = "a set of management group names to create"
 }
 
